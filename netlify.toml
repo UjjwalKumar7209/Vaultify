@@ -1,7 +1,6 @@
 [build]
 command = """
 cd server &&
-npm install -g pnpm &&
 pnpm install &&
 pnpm prisma generate &&
 cd ../client &&
