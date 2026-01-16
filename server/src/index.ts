@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json())
 // app.use(cors());
 app.use(cors({
-  origin: '*',
+  origin: true,
   credentials: true
 }))
 
@@ -23,6 +23,8 @@ app.use('/api/v1/link', linkRouter);
 app.use('/api/v1/subject', subjectRouter);
 app.use('/api/v1/category', categoryRouter);
 
-app.listen(PORT, () => {
-    console.log("Server running on port:", PORT)
-})
+// app.listen(PORT, () => {
+//     console.log("Server running on port:", PORT)
+// })
+
+export default app;

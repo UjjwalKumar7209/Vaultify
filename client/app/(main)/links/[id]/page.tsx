@@ -13,7 +13,7 @@ export default function LinkDetailPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/v1/link/${id}`, {
+      .get(`/api/v1/link/${id}`, {
         headers: { Authorization: localStorage.getItem('token') }
       })
       .then(res => setLink(res.data.data))

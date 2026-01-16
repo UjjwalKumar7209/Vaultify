@@ -25,7 +25,7 @@ export default function NewNotePage() {
     setLoading(true)
 
     await axios.post(
-      'http://localhost:8000/api/v1/notes',
+      '/api/v1/notes',
       form,
       { headers: { Authorization: localStorage.getItem('token') } }
     )
