@@ -1,12 +1,9 @@
 [build]
-command = """
-cd server &&
-pnpm install &&
-pnpm prisma generate &&
-cd ../client &&
-npm install &&
-npm run build
-"""
+base = "client"
+command = "npm install && npm run build"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
 
 [functions]
 directory = "server/netlify/functions"
