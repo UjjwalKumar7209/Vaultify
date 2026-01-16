@@ -23,7 +23,7 @@ export default function NotesPage() {
         if (!token) return
 
         const res = await axios.get(
-          '/api/v1/notes/bulk',
+          'http://localhost:8000/api/v1/notes/bulk',
           { headers: { Authorization: token } }
         )
 

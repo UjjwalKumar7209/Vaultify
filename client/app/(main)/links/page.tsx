@@ -23,7 +23,7 @@ export default function LinksPage() {
         if (!token) return
 
         const res = await axios.get(
-          '/api/v1/link/bulk',
+          'http://localhost:8000/api/v1/link/bulk',
           { headers: { Authorization: token } }
         )
 

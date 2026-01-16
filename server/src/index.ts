@@ -23,8 +23,6 @@ app.use('/api/v1/link', linkRouter);
 app.use('/api/v1/subject', subjectRouter);
 app.use('/api/v1/category', categoryRouter);
 
-// app.listen(PORT, () => {
-//     console.log("Server running on port:", PORT)
-// })
-
-export default app;
+app.listen(PORT, () => {
+    console.log("Server running on port:", PORT)
+})

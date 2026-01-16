@@ -25,7 +25,7 @@ export default function NewLinkPage() {
     setLoading(true)
 
     await axios.post(
-      '/api/v1/link',
+      'http://localhost:8000/api/v1/link',
       form,
       { headers: { Authorization: localStorage.getItem('token') } }
     )

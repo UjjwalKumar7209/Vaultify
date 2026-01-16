@@ -13,7 +13,7 @@ export default function NoteDetail() {
 
   useEffect(() => {
     axios
-      .get(`/api/v1/notes/${id}`, {
+      .get(`http://localhost:8000/api/v1/notes/${id}`, {
         headers: { Authorization: localStorage.getItem('token') }
       })
       .then(res => setNote(res.data.data))
